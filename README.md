@@ -86,6 +86,7 @@ Signal Quality Check LF - OTEL - RF - OTER: [1, 0, 1, 1]
 ### 📥 Reading and Plotting Data
 
 - Reads raw data from file .dat
+
 File: `reader_raw_data.py`
 
 **Example Output EEG, IMU, PPG Raw Data:**
@@ -127,6 +128,7 @@ IMU DATA:
 
 
 - Plots the real-time processed data (Focus score, Sleep stage, PoAS, Posture...)
+
 File: `reader_processed_data.py`
 
 **Example Output Focus Score:**
