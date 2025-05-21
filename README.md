@@ -3,6 +3,9 @@ This page provides examples to help you get started with using the Frenz Streami
 
 ### **I. Getting started**
 
+#Official tool page:
+https://pypi.org/project/frenztoolkit/
+
 You can install the Frenz Streaming Toolkit on your PC using pip:
 
 ```bash
@@ -61,6 +64,15 @@ File: `scanner.py`
 File: `streaming_data.py`
 
 **Example Output Real-time Data:**
+#### Values description:
+- EEG, PPG, IMU: raw data
+- EEG, EOG, EMG: Filtered data, unit: uV
+- alpha, beta, delta, gamma, theta: unit: dB
+- Posture: string value
+- POAS: value from 0 -> 1
+- Sleep Stage: value < 0: undefined, value = 0: awake, value = 1: light, value = 2: deep, value = 3: REM
+- Focus score: value from 0 -> 100
+- Signal Quality: 1 good, 0 not good
 
 ```python
 AT TIME:  290.48088693618774
