@@ -91,6 +91,20 @@ File: `reader_raw_data.py`
 
 **Example Output EEG, IMU, PPG Raw Data:**
 
+# Channel description:
+# LF: left forehead
+# OTEL: over the ear right
+# REF1: left reference
+# REF2: right reference
+# RF: right forehead
+# OTER: over the ear left
+# GREEN: green LED
+# RED: red LED
+# INFRARED: infrared LED
+# X: x-axis
+# Y: y-axis
+# Z: z-axis
+
 ```python
 EEG DATA:
  LF          OTEL        REF1    RF     OTER        REF2
