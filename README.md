@@ -4,6 +4,7 @@ This page provides examples to help you get started with using the Frenz Streami
 ### **I. Getting started**
 
 #Official tool page:
+
 https://pypi.org/project/frenztoolkit/
 
 You can install the Frenz Streaming Toolkit on your PC using pip:
@@ -39,7 +40,7 @@ python3.9 -m venv vir_name
 ```bash
 source vir_name/bin/activate  
 ```
-### **I. Example Code**
+### **II. Example Code**
 
 > ⚠️ **Make sure all dependencies are installed and the environment is activated.**
 
