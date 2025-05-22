@@ -106,11 +106,11 @@ File: `reader_raw_data.py`
 
 #### Channel description:
 - LF: left forehead
-- OTEL: over the ear right
+- OTEL: over the ear left
 - REF1: left reference
 - REF2: right reference
 - RF: right forehead
-- OTER: over the ear left
+- OTER: over the ear right
 - GREEN: green LED
 - RED: red LED
 - INFRARED: infrared LED
