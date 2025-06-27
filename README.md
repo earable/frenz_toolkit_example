@@ -24,22 +24,57 @@ A valid product key is required to use the toolkit. Please contact our sales dep
 Before using the toolkit, ensure you have the following:
 
 - A Frenz Brainband
-- A laptop/desktop (MacOS) with Bluetooth and internet connectivity
-- A product key (contact Earable’s sales department if you don’t have one)
+- A laptop/desktop (MacOS, Windows 64) with Bluetooth and internet connectivity
+- A product key (contact Earable's sales department if you don't have one)
 - Python 3.9 environment:
+
+Goto page: https://www.python.org/downloads/release/python-3913/
+
+Choose your OS setup file:
+
+MacOS: https://www.python.org/ftp/python/3.9.13/python-3.9.13-macos11.pkg
+
+Windows 64: https://www.python.org/ftp/python/3.9.13/python-3.9.13-amd64.exe
+
 ### Check if Python 3.9 is installed
 ```bash
 python3.9 --version
 ```
+or
+
+```bash
+python --version
+```
+
+Result:
+
+Python 3.9.xx
+
 ### Create new virtual environment
 ```bash
 python3.9 -m venv vir_name
 ```
+or
+
+```bash
+python -m venv vir_name
+```
+
 ### Environment activation:
-### macOS
+### MacOS
 ```bash
 source vir_name/bin/activate  
 ```
+
+### Windows 64 OS
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+```
+
+```bash
+.\vir_name\Scripts\Activate.ps1
+```
+
 ### **II. Example Code**
 
 > ⚠️ **Make sure all dependencies are installed and the environment is activated.**
@@ -120,37 +155,37 @@ File: `reader_raw_data.py`
 
 ```python
 EEG DATA:
- LF          OTEL        REF1    RF     OTER        REF2
-[[-100195.   77583.       0.  -87289.   65165.       0.]
- [-100196.   77548.       0.  -87297.   65085.       0.]
- [-100191.   77648.       0.  -87305.   65195.       0.]
+ TIMESTAMP         LF        OTEL        REF1   RF      OTER        REF2
+[[1.75093644e+09  -100195.   77583.       0.  -87289.   65165.       0.]
+ [1.75093645e+09  -100196.   77548.       0.  -87297.   65085.       0.]
+ [1.75093645e+09  -100191.   77648.       0.  -87305.   65195.       0.]
  ...
- [-103974.   71144.       0.  -87340.   58539.       0.]
- [-103986.   71680.       0.  -87331.   58832.       0.]
- [-103989.   71231.       0.  -87336.   58594.       0.]]
+ [1.75093773e+09  -103974.   71144.       0.  -87340.   58539.       0.]
+ [1.75093773e+09  -103986.   71680.       0.  -87331.   58832.       0.]
+ [1.75093773e+09  -103989.   71231.       0.  -87336.   58594.       0.]]
 
 --------------------------------
 
 PPG DATA:
-  GREEN    RED    INFRARED
-[[     0.  85028. 147502.]
- [     0.  85022. 147517.]
- [     0.  85144. 147526.]
+  TIMESTAMP         GREEN  RED  INFRARED
+[[1.75093644e+09     0.  85028. 147502.]
+ [1.75093645e+09     0.  85022. 147517.]
+ [1.75093645e+09     0.  85144. 147526.]
  ...
- [     0.  83209. 143922.]
- [     0.  83097. 144005.]
- [     0.  83200. 143946.]]
+ [1.75093773e+09     0.  83209. 143922.]
+ [1.75093773e+09     0.  83097. 144005.]
+ [1.75093773e+09     0.  83200. 143946.]]
 --------------------------------
 
 IMU DATA:
-  X             Y            Z
-[[ 634.703125  -47.46875    -9.49375 ]
- [-591.675    -126.175      80.2375  ]
- [-592.440625 -124.64375    84.83125 ]
+  TIMESTAMP        X             Y            Z
+[[1.75093644e+09  634.703125  -47.46875    -9.49375 ]
+ [1.75093645e+09  -591.675    -126.175      80.2375  ]
+ [1.75093645e+09  -592.440625 -124.64375    84.83125 ]
  ...
- [-604.5375    -84.83125    68.90625 ]
- [-600.55625   -84.525      70.13125 ]
- [-592.746875  -79.93125    69.059375]]
+ [1.75093773e+09  -604.5375    -84.83125    68.90625 ]
+ [1.75093773e+09  -600.55625   -84.525      70.13125 ]
+ [1.75093773e+09  -592.746875  -79.93125    69.059375]]
 ```
 
 
@@ -164,6 +199,10 @@ File: `reader_processed_data.py`
 [40, 40, 40, 40, 40.0, 39.99999999999997, 40.12766772782202, 40.561565017143344, 41.4082156256315, 43.10299038990237, 45.472087116573455, 48.74391187090239, 52.24061530716966, 55.60602305133689, 58.679040962640684, 62.18110934363549, 65.14715231299175, 68.02080813392078, 70.90584790357892, 73.55213246059323, 75.15588285140683, 76.47206224616545, 77.60785020893118, 78.4955176672901, 78.62229982451035, 78.3885666852457, 77.4115503825933, 75.75179777982981, 73.66542059721976, 71.96536767124985, 70.48599527626322, 69.74081135506184, 69.69574827772887, 69.67955939998745, 69.47138500905257, 68.6731180879701, 66.83801060478645, 63.92612785317225, 60.222929411120354, 56.08215648747377, 52.01314753099665, 48.36627998286406, 45.060605588479476, 42.25080500048814, 39.8846423996156, 37.90671187849681, 36.51019137239177, 36.09388113475098, 37.0245762557948, 39.34660640670969, 42.75964145377674, 46.576742345145156, 49.96553650773667, 52.2702299218743, 53.47123615744823, 54.10436210964932, 54.96046849984769, 56.884750140896244, 59.543829922368104, 62.012692934353524, 64.49350372598443, 66.61720332706498, 67.87778789873232, 68.41556392091044, 68.68703561203017]
 ```
 ---
+
+File: `reader_create_charts.py`
+
+- Draw charts for SLEEP STAGE, POAS, FOCUS, SIGNAL QUALITY data from csv or json file
 
 ## 📚 License & Support
 

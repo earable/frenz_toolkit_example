@@ -4,7 +4,7 @@ from frenztoolkit.reader import load_experiment
 
 # Load the recorded session from your experiment folder
 # find the folder contains your recorded data by timestamp
-session_data = load_experiment("./recorded_data/1746436416.925101")
+session_data = load_experiment("sample_recorded_file")
 
 # Access EEG and Focus score history
 eeg = session_data["DATA"]["RAW"]["EEG"]
