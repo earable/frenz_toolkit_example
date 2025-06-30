@@ -112,9 +112,9 @@ File: `streaming_data.py`
 
 ```python
 AT TIME:  290.48088693618774
-EEG shape: (35379, 6)
-PPG shape: (6684, 3)
-IMU shape: (14125, 3)
+EEG shape: (35379, 7)
+PPG shape: (6684, 4)
+IMU shape: (14125, 4)
 Filtered EEG shape: (4, 34250)
 Filtered EOG shape: (4, 34250)
 Filtered EMG shape: (4, 34250)
